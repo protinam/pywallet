@@ -36,7 +36,7 @@ import random
 import math
 
 max_version = 60000
-addrtype = 0
+addrtype = 73
 json_db = {}
 private_keys = []
 password = None
@@ -46,10 +46,10 @@ def determine_db_dir():
     import os.path
     import platform
     if platform.system() == "Darwin":
-        return os.path.expanduser("~/Library/Application Support/Bitcoin/")
+        return os.path.expanduser("~/Library/Application Support/Wyvern/")
     elif platform.system() == "Windows":
-        return os.path.join(os.environ['APPDATA'], "Bitcoin")
-    return os.path.expanduser("~/.bitcoin")
+        return os.path.join(os.environ['APPDATA'], "Wyvern")
+    return os.path.expanduser("~/.wyvern")
 
 # from the SlowAES project, http://code.google.com/p/slowaes (aes.py)
 
